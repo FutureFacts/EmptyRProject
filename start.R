@@ -1,3 +1,4 @@
+
 ######## Initialisation ########
 # Close any open devices (if an error occurs while saving an image, a device may be left open)
 for (d in dev.list()) { try(dev.off()); }; rm(d);
@@ -21,13 +22,13 @@ project_ensure_folder <- function(folderName) {
 
 
 ######## Parameters ########
-# install.packages("config")
 # Sys.setenv(R_CONFIG_ACTIVE = "")
 # Sys.setenv(R_CONFIG_ACTIVE = "acceptance")
 # Sys.setenv(R_CONFIG_ACTIVE = "production")
 # Sys.getenv("R_CONFIG_ACTIVE")
 
 DTS <- as.POSIXlt(Sys.time(), "UTC");
+install.packages("config")
 library(config);
 project_config   <- config::get(file = "config.yml", use_parent = FALSE);
 rm(DTS);
@@ -41,7 +42,7 @@ for (folder in project_config$folders) {
 
 
 ######## Logging ########
-# install.packages("logging")
+install.packages("logging")
 library(logging);
 basicConfig(level = project_config$logging$level);
 addHandler(  writeToFile
