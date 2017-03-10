@@ -1,5 +1,9 @@
 
 ######## Initialisation ########
+
+# Libpath
+.libPaths("C:/Rlibs")
+
 # Close any open devices (if an error occurs while saving an image, a device may be left open)
 for (d in dev.list()) { try(dev.off()); }; rm(d);
 # Clear the Global Environment
