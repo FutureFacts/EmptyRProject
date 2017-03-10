@@ -17,14 +17,14 @@ required.packages <- c(
   # , "rpart.plot"          # plot CART
   # , "randomForest"        # random forest
   # , "nnet"                # neural network
-  # , "caret"               # cross-validation for CART, preProcess
+   , "caret"               # cross-validation for CART, preProcess
   # , "e1071"               # cross-validation for CART
   # , "tm"                  # text mining
   # , "SnowballC"           #
   # , "RTextTools"          # poly-grams
   # , "flexclust"           # clustering
-  # , "dplyr"
-  # , "reshape2"            # melt
+   , "dplyr"
+   , "reshape2"            # melt
   # , "lubridate"
 );
 
